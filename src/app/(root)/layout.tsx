@@ -1,6 +1,4 @@
-import { ClerkProvider } from "@clerk/nextjs";
 import type { Metadata } from "next";
-import "./globals.css";
 
 export const metadata: Metadata = {
   title: "Zoom Clone",
@@ -8,16 +6,14 @@ export const metadata: Metadata = {
     "Zoom app for video conference and best practice and improve coding skills",
 };
 
-export default function RootLayout({
+export default function meetingLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
   return (
-    <ClerkProvider>
-      <html>
-        <body className="bg-dark-1 relative">{children}</body>
-      </html>
-    </ClerkProvider>
+    <div>
+      <div>{children}</div>
+    </div>
   );
 }

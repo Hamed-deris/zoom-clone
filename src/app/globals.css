@@ -57,6 +57,9 @@ body {
 }
 
 /* ==== clerk class override ===== */
+button.cl-button:hover {
+  color: #fff;
+}
 
 .cl-userButtonPopoverActionButtonIcon {
   color: white;
@@ -82,6 +85,16 @@ body {
 }
 
 /* =============================== */
+
+@layer utilities {
+  .flex-center {
+    @apply flex justify-center items-center;
+  }
+
+  .flex-between {
+    @apply flex justify-between items-center;
+  }
+}
 
 /* animation */
 

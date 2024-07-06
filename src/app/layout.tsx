@@ -1,5 +1,7 @@
 import { ClerkProvider } from "@clerk/nextjs";
+
 import type { Metadata } from "next";
+import StreamVideoProvider from "../../providers/StreamClientProvider";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -26,7 +28,9 @@ export default function RootLayout({
       }}
     >
       <html>
-        <body className="bg-dark-1 relative">{children}</body>
+        <body className="bg-dark-1 relative">
+          <StreamVideoProvider>{children}</StreamVideoProvider>
+        </body>
       </html>
     </ClerkProvider>
   );

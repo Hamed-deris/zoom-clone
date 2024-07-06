@@ -1,5 +1,6 @@
 "use client";
 import { cn } from "@/lib/utils";
+import { DialogTitle } from "@radix-ui/react-dialog";
 import Image from "next/image";
 import { ReactNode } from "react";
 import { Button } from "./ui/button";
@@ -41,9 +42,11 @@ const MeetingModal = ({
               <Image src={image} alt="checked" width={72} height={72} />
             </div>
           )}
-          <h1 className={cn("text-3xl font-bold leading-[42px]", className)}>
+          <DialogTitle
+            className={cn("text-3xl font-bold leading-[42px]", className)}
+          >
             {title}
-          </h1>
+          </DialogTitle>
           {children}
           <Button
             className={
@@ -58,7 +61,7 @@ const MeetingModal = ({
                 width={13}
                 height={13}
               />
-            )}{" "}
+            )}
             &nbsp;
             {buttonText || "Schedule Meeting"}
           </Button>
